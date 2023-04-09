@@ -1,0 +1,25 @@
+/* Contact Me Section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#contact ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#contact ul li a {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
