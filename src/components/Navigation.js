@@ -1,26 +1,54 @@
-import React from 'react'
-import {Link} from 'react-scroll'
-import '../assets/css/Navagation.css'
+import React from 'react';
+import '../assets/css/Navigation.css'
 
-const Navigation = () => {
+// Here we are using object destructuring assignment to pluck off our variables from the props object
+// We assign them to their own variable names
+export default function Navigation({ currentPage, handlePageChange }) {
   return (
-        <nav className='main-nav'>
-            <ul>
-                <li>
-                <Link activeClass="" to="home" spy={true} smooth={true}>Home</Link>
-                </li>
-                <li>
-                <Link activeClass="" to="about-me" spy={true} smooth={true}>About</Link>
-                </li>
-                <li>
-                <Link activeClass="" to="projects" spy={true} smooth={true}>Projects</Link>
-                </li>
-                <li>
-                <Link activeClass="" to="contact" spy={true} smooth={true}>Contact</Link>
-                </li>
-            </ul>
-        </nav>
-         )
+    <div className='main-nav'>
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <a
+          href="#home"
+          onClick={() => handlePageChange('Home')}
+          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+        >
+          Home
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#about"
+          onClick={() => handlePageChange('About')}
+          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+        >
+          About
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#projects"
+          onClick={() => handlePageChange('Projects')}
+          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
+        >
+          Portfolio
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#contact"
+          onClick={() => handlePageChange('Contact')}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+    </div>
+  );
 }
-
-export default Navigation

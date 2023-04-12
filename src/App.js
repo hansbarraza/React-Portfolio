@@ -1,20 +1,13 @@
-import React from 'react'
-import Header from './components/Header'
-import Navigation from './components/Navigation'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
-import Main from './components/Main'
+import React from "react";
+import Header from "./components/Header";
 import './assets/css/App.css'
+import Footer from "./components/Footer";
 
-const App = () => {
-  return (
-    <div>
-    <Header/>
-    <Main/>
-    <Projects/>
-    <Footer/>
-    </div>
-  )
+export default function App() {
+  return(
+<div className="app-cont">
+  <Header/>
+  <Footer/>
+</div>
+)
 }
-
-export default App
