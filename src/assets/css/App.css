@@ -39,7 +39,7 @@ body {
 /* responsive to phone size devices */
 @media screen and (max-width:480px) {
     #home {
-        height: 780px;
+        height: 745px;
     }
     
     #about-me {
@@ -52,7 +52,7 @@ body {
     
     #pic img {
         width: 250px;
-        height: 275px; 
+        height: 280px; 
     }
     
     .gallery img {
